@@ -159,16 +159,7 @@ class Environment {
     );
   }
 
-  // getClosestPointOnPath(pos) {
-  //   // For simplicity, returns the door position if in office, else emergency exit
-  //   if (this.isInsideOffice(pos.x, pos.y)) {
-  //     return createVector(this.door.x + this.door.width / 2, this.door.y + this.door.height / 2);
-  //   } else if (this.isInsideCorridor(pos.x, pos.y)) {
-  //     return createVector(this.emergencyExit.x, this.emergencyExit.y);
-  //   } else {
-  //     return this.gatheringPoint.copy();
-  //   }
-  // }
+
 
   getClosestPointOnPath(pos) {
     // If inside the office, return the door position

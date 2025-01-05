@@ -367,65 +367,6 @@ class StayInBoundsBehavior extends Behavior {
   }
 }
 
-// class StayInBoundsBehavior extends Behavior {
-//   constructor() {
-//     super();
-//     this.weight = 3;
-//   }
-
-//   apply(employee, behaviorManager) {
-//     let steer = this.stayInBounds(employee);
-
-//     if (steer.mag() > 0) {
-//       steer.normalize();
-//       steer.mult(this.weight);
-//       employee.applyForce(steer);
-//     }
-//   }
-
-//   stayInBounds(employee) {
-//     let steer = createVector(0, 0);
-
-//     // Option A: Only if truly outside
-//     // if (!employee.environment.isInsideOffice(employee.pos.x, employee.pos.y) &&
-//     //     !employee.environment.isInsideCorridor(employee.pos.x, employee.pos.y)) {
-//     //   let closestPoint = employee.environment.getClosestPointOnPath(employee.pos);
-//     //   steer = p5.Vector.sub(closestPoint, employee.pos);
-//     // }
-//     // return steer;
-
-//     // ------ A more gentle approach: ------
-//     let margin = 50; // "soft" boundary margin
-//     let pos = employee.pos;
-//     let env = employee.environment;
-
-//     // 1) If inside the corridor or office but near edges, gently steer in
-//     if (env.isInsideOffice(pos.x, pos.y) || env.isInsideCorridor(pos.x, pos.y)) {
-//       let closestEdge = env.getClosestPointOnPath(pos);
-//       let distToEdge = p5.Vector.dist(pos, closestEdge);
-
-//       // If we're within 'margin' distance of the boundary, steer back in
-//       if (distToEdge < margin) {
-//         let desired = p5.Vector.sub(closestEdge, pos);
-//         // Scale by how close we are to the boundary
-//         let scale = map(distToEdge, 0, margin, employee.maxSpeed, 0, true);
-//         desired.setMag(scale);
-//         steer = p5.Vector.sub(desired, employee.vel);
-//         steer.limit(employee.maxForce);
-//       }
-//     } 
-//     // 2) If entirely outside, steer strongly back in
-//     else {
-//       let closestPoint = env.getClosestPointOnPath(pos);
-//       let desired = p5.Vector.sub(closestPoint, pos);
-//       desired.setMag(employee.maxSpeed);
-//       steer = p5.Vector.sub(desired, employee.vel);
-//       steer.limit(employee.maxForce);
-//     }
-
-//     return steer;
-//   }
-// }
 
 // Separation Behavior
 class SeparationBehavior extends Behavior {
