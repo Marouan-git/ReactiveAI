@@ -88,7 +88,7 @@ All behaviors are implemented in a BehaviorManager.
 
 ## Running the Simulation
 
-1. **Open** the `index.html` (or your p5.js hosting setup).
+1. **Click** the link: https://marouan-git.github.io/SteeringBehaviors/.
 2. **Observe** employees wandering in the office.
 3. **Click** inside the office to start a fire:
    - The leader heads for the exit, others follow the leader in a queue.
